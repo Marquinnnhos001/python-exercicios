@@ -14,7 +14,28 @@ try:
     # Ler o conteudo da resposta
     data = response.read().decode('utf-8')
 
-    # Teste...
-    print(data)
+    # Converter JSON em dicionário Pyton
+    endereco = json.loads(data)
+
+    # Verificar se a consulta foi bem-sucedida
+    if endereco.get('erro'):
+        print("CEP não encontrado")
+    else:
+        # Armazenar informações em variáveis
+        logradouro = endereco['logadouro']
+        complemento = endereco['complemento']
+        bairro = endereco['bairro']
+        cidade = endereco['localidade']
+        estado = endereco['uf']
+
+       # Exibir Informações do endereço na tela 
+       print(f"Logradouro: {logradouro}")
+       print(f"Complemento: {complemento}")
+       print(f"Bairro: {bairro}")
+       print(f"Cidade: {cidade}")
+       print(f"Estado: {estado}")
+
+    # Fechar a conexão
+    response.close()
 except Exception as e:
     print(f"Erro: {e}")
