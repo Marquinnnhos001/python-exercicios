@@ -44,5 +44,5 @@ def main():
         print("escolha inválida. por favor, escolha 1, 2 ou 3.")
 
 # Chama a função principal do programa se este arquivo for executado diretamente
-if _name_ == "_main_":
+if __name__ == "_main_":
     main()
