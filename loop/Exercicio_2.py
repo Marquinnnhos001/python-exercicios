@@ -12,4 +12,4 @@ while iteracao<5:
         impar+=1
     iteracao+=1
 print(f'{par} são pares')
-print(f'{impar} são ímpares')
+print(f'{impar} são ímpares') 
