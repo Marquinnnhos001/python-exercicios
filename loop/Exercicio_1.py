@@ -1,6 +1,6 @@
 # Solicite ao Usuário que Informe o Número Inteiro
-n= int(input("informe um número inteiro positivo N:"))
-
+n= int(input("Informe um número inteiro positivo N:"))
+       
 #Verifique se o número informado é positivo
 while n<=0:
     n = int(input("Por favor, informe um número inteiro positivo N:"))
